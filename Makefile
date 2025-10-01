@@ -15,7 +15,8 @@ config.h:
 
 template: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
-
+test: ${OBJ}
+	${CC} -o $@ ${SRC} ${TESTCFLAGS} ${LDFLAGS} 
 clean:
 	rm -f template ${OBJ} template-${VERSION}.tar.gz ;
 

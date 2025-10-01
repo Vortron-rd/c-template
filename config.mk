@@ -1,5 +1,5 @@
 # version
-VERSION = 0.0.0-alpha
+VERSION = 0.0.0
 
 # Customize below to fit your system
 
@@ -12,8 +12,8 @@ INCS =
 LIBS = 
 
 # flags
-CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"${VERSION}\"
-#CFLAGS   = -g -std=c99 -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
+CPPFLAGS =  -DVERSION=\"${VERSION}\"
+TESTCFLAGS   = -g -std=c99 -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
 CFLAGS   = -pedantic -Wall -Wno-deprecated-declarations -Os ${INCS} ${CPPFLAGS}
 LDFLAGS  = ${LIBS}
 
